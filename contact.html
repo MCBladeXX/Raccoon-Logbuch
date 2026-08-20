@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notruf-Kontakt - Raccoon City Überlebens-Logbuch</title>
+</head>
+<body>
+
+    <header>
+        <h1>Raccoon City Überlebens-Logbuch</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="post.html">Tagebucheinträge</a></li>
+                <li><a href="about.html">Über Leon</a></li>
+                <li><strong>Notruf-Kontakt</strong></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Überlebenden-Meldung &amp; Notfunk</h2>
+            <p>Befinden Sie sich noch im Stadtgebiet von Raccoon City? Nutzen Sie dieses verschlüsselte Formular, um Ihren Status und Ihren aktuellen Zufluchtsort durchzugeben.</p>
+            
+            <!-- Das Formular schickt die Daten mangels Backend im Moment nirgendwo hin, ist aber syntaktisch voll funktionsfähig -->
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Persönliche Angaben</legend>
+                    
+                    <p>
+                        <label for="name">Ihr Name / Codename:</label><br>
+                        <input type="text" id="name" name="name" required placeholder="Z. B. Claire Redfield">
+                    </p>
+                    
+                    <p>
+                        <label for="status">Aktueller Gesundheitsstatus:</label><br>
+                        <select id="status" name="status">
+                            <option value="gesund">Sicher / Gesund</option>
+                            <option value="verletzt">Verletzt (Erste Hilfe benötigt)</option>
+                            <option value="infiziert">Infiziert (T- oder G-Virus Symptome)</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Standort &amp; Nachricht</legend>
+                    
+                    <p>
+                        <label for="location">Letzter bekannter Aufenthaltsort:</label><br>
+                        <input type="text" id="location" name="location" required placeholder="Z. B. Uhrenturm des RPD">
+                    </p>
+
+                    <p>
+                        <label for="message">Nachricht / Lagebericht:</label><br>
+                        <textarea id="message" name="message" rows="6" cols="40" required placeholder="Beschreiben Sie Ihre Situation... Müssen Sie evakuiert werden?"></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Notsignal senden">
+                    <input type="reset" value="Eingabe löschen">
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 1998 Raccoon City Überlebens-Logbuch.</p>
+    </footer>
+
+</body>
+</html>
